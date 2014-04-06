@@ -2,4 +2,9 @@
 
 Some Dockerfiles I use to test Docker
 
+## apache
 
+    $ sudo docker build -t "geelweb/apache2" ./apache2/
+    $ sudo docker run -p 80:80 -d geelweb/apache2
+
+    $ sudo docker run -v ~/www:/var/www -p 80:80 -d geelweb/apache2
