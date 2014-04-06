@@ -14,4 +14,13 @@ Some Dockerfiles I use to test Docker
     $ sudo docker build -t "geelweb/php-apache" ./php-apache/
     $ sudo docker run -v ~/www:/var/www -p 80:80 -d geelweb/php-apache
 
+## mysql
+
+    $ sudo docker build -t "geelweb/mysql" ./mysql/
+    $ sudo docker run -p 3306:3306 -d geelweb/mysql
+
+    $ sudo docker ps
+    $ sudo docker inspect <CONTAINER_ID>
+
+    $ mysql -h <IP> -u root -p
 
