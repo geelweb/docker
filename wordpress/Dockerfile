@@ -10,8 +10,6 @@ RUN tar xzf wordpress.tar.gz -C /var/www --strip-components 1
 RUN rm wordpress.tar.gz
 RUN chown -R www-data:www-data /var/www 
 
-VOLUME ["/var/www"]
-
 EXPOSE 80
 
 ENTRYPOINT ["/usr/sbin/apache2"]
