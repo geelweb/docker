@@ -22,5 +22,13 @@ Some Dockerfiles I use to test Docker
     $ sudo docker ps
     $ sudo docker inspect <CONTAINER_ID>
 
-    $ mysql -h <IP> -u root -p
+    $ mysql -h <CONTAINER_IP> -u root -p
+
+## wordpress
+
+    $ sudo docker build -t "geelweb/wordpress" ./wordpress/
+    $ sudo docker run -p 80:80 -d geelweb/wordpress
+
+    $ mysql -h <CONTAINER_IP> -u root -p -e "create database wordpress;"
+
 
