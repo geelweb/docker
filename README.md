@@ -17,7 +17,7 @@ Some Dockerfiles I use to test Docker
 ## mysql
 
     $ sudo docker build -t "geelweb/mysql" ./mysql/
-    $ sudo docker run -p 3306:3306 -d geelweb/mysql
+    $ sudo docker run -p 3306:3306 -v /data/mysql:/var/lib/mysql -d geelweb/mysql
 
     $ sudo docker ps
     $ sudo docker inspect <CONTAINER_ID>
